@@ -4,6 +4,11 @@ Setup script for L1-Renaissance package.
 
 from setuptools import setup, find_packages
 import os
+from pathlib import Path
+
+# Читаем README для длинного описания
+this_directory = Path(__file__).parent
+long_description = (this_directory / "README.md").read_text(encoding="utf-8")
 
 # Read README for long description
 with open("README.md", "r", encoding="utf-8") as fh:
