@@ -21,8 +21,8 @@ with open("requirements.txt", "r") as f:
 setup(
     name="l1renaissance",
     version="0.1.0",
-    author="Alexey Kurchanov",
-    author_email="",  # Optional
+    author="Anatoliy Kurchanov",
+    author_email="a.f.kurchanov@gmail.com",  # Optional
     description="Modern revival of 2006 L1-adaptive filtering algorithm",
     long_description=long_description,
     long_description_content_type="text/markdown",
