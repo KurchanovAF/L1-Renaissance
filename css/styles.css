@@ -1,0 +1,499 @@
+/* ===== СТИЛИ ДЛЯ РАЗДЕЛА ИССЛЕДОВАНИЙ ===== */
+
+/* Контейнер исследования */
+.research-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Герой-заголовок */
+.research-hero {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--accent-gold);
+}
+
+.research-hero h1 {
+    font-size: 2.5rem;
+    color: var(--secondary-bg);
+    margin-bottom: 1rem;
+}
+
+.research-hero .subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.research-hero .author {
+    font-size: 1.1rem;
+    color: var(--secondary-bg);
+    font-weight: bold;
+}
+
+/* Табы навигации */
+.research-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 1rem;
+}
+
+.tab-button {
+    padding: 0.75rem 1.5rem;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: 'Cinzel', serif;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+.tab-button.active {
+    background: var(--secondary-bg);
+    color: white;
+    border-color: var(--secondary-bg);
+}
+
+/* Содержимое табов */
+.tab-content {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Карточки с контентом */
+.research-container .card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    border-left: 4px solid var(--accent-gold);
+}
+
+.research-container h2 {
+    color: var(--secondary-bg);
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.research-container h3 {
+    color: #444;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Ключевые слова */
+.keywords {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.keyword {
+    background: #e9f2f9;
+    color: var(--secondary-bg);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Таймлайн */
+.timeline {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--accent-gold);
+    z-index: 1;
+}
+
+.timeline-item {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    flex: 1;
+}
+
+.timeline-year {
+    background: var(--secondary-bg);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-weight: bold;
+    border: 4px solid white;
+}
+
+.timeline-desc {
+    font-size: 0.9rem;
+    color: #666;
+    max-width: 150px;
+    margin: 0 auto;
+}
+
+/* Формулы */
+.formula {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    text-align: center;
+    overflow-x: auto;
+    border-left: 3px solid var(--accent-gold);
+}
+
+/* Псевдокод */
+.pseudo-code {
+    background: #2d3748;
+    color: #e2e8f0;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    font-family: 'Courier New', monospace;
+    overflow-x: auto;
+}
+
+.pseudo-code pre {
+    margin: 0;
+}
+
+/* Сетка свойств */
+.properties-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.property {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.property:hover {
+    transform: translateY(-5px);
+}
+
+.property i {
+    font-size: 2rem;
+    color: var(--accent-gold);
+    margin-bottom: 1rem;
+}
+
+/* Визуализация метода */
+.visual-explanation {
+    background: #f0f7ff;
+    border-radius: 10px;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.step {
+    margin-bottom: 2rem;
+}
+
+.pair-example {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.pair {
+    background: white;
+    border: 2px solid var(--accent-gold);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-family: monospace;
+}
+
+/* Блок с результатами */
+.results-box {
+    background: linear-gradient(135deg, #2e4c3e 0%, #3a5c4a 100%);
+    color: white;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.results-box h3 {
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.metric {
+    display: inline-block;
+    margin: 0 1.5rem;
+}
+
+.metric-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--accent-gold);
+}
+
+.metric-label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Секция демо */
+.demo-section {
+    margin-top: 2rem;
+}
+
+.demo-container {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-top: 1rem;
+}
+
+.demo-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    align-items: center;
+}
+
+.demo-btn {
+    background: var(--secondary-bg);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background 0.3s;
+}
+
+.demo-btn:hover {
+    background: #3a5c4a;
+}
+
+.param-control {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: auto;
+}
+
+.algo-select {
+    display: flex;
+    gap: 1rem;
+    background: white;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+}
+
+.charts-placeholder {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.chart {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--secondary-bg);
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Секция кода */
+.code-section {
+    margin-top: 3rem;
+}
+
+.code-tabs {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 1rem;
+}
+
+.code-tab {
+    padding: 0.75rem 1.5rem;
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+    font-family: 'Courier New', monospace;
+}
+
+.code-tab.active {
+    border-bottom-color: var(--secondary-bg);
+    font-weight: bold;
+}
+
+.code-content {
+    display: none;
+    background: #2d3748;
+    color: #e2e8f0;
+    padding: 1.5rem;
+    border-radius: 0 0 8px 8px;
+    overflow-x: auto;
+}
+
+.code-content.active {
+    display: block;
+}
+
+/* Кнопки скачивания */
+.download-section {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.download-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.download-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--accent-gold);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.download-btn:hover {
+    background: #b89446;
+    color: white;
+}
+
+/* Подсветка */
+.highlight {
+    background: #fff3cd;
+    color: #856404;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* Футер */
+.main-footer {
+    background: var(--secondary-bg);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+}
+
+.main-footer a {
+    color: var(--accent-gold);
+    text-decoration: none;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .research-tabs {
+        flex-direction: column;
+    }
+    
+    .tab-button {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .timeline {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .timeline::before {
+        display: none;
+    }
+    
+    .charts-placeholder {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .properties-grid {
+        grid-template-columns: 1fr;
+    }
+}
